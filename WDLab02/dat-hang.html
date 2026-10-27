@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mộc & Nâu Coffee | Đặt hàng & Đặt bàn</title>
+</head>
+<body bgcolor="#F1DEBC">
+
+  <!-- HEADER -->
+  <table bgcolor="#4C2113" border="0" cellpadding="20" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+        <font color="#FFFFFF" size="7"><b>☕ TIỆM CÀ PHÊ MỘC & NÂU ☕</b></font><br/>
+        <font color="#DCB485" size="4"><i>The Art of Raw Taste</i></font><br/>
+        <font color="#B38B60" size="2">Không gian cà phê mộc mạc & thư thái | HTML ONLY</font>
+      </td>
+    </tr>
+  </table>
+
+  <!-- NAVIGATION -->
+  <table bgcolor="#B38B60" border="0" cellpadding="12" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+        <nav aria-label="Điều hướng chính">
+          <font color="#FFFFFF">
+            <a href="index.html"><font color="#FFFFFF"><b>⌂ Trang chủ</b></font></a>
+            |
+            <a href="index.html#san-pham"><font color="#FFFFFF"><b>☕ Thực đơn</b></font></a>
+            |
+            <a href="chi-tiet.html"><font color="#FFFFFF"><b>▤ Về Mộc & Nâu</b></font></a>
+            |
+            <a href="bang-gia.html"><font color="#FFFFFF"><b>▦ Bảng giá</b></font></a>
+            |
+            <a href="dat-hang.html"><font color="#FFFFFF"><b>✉ Đặt món & bàn ngay</b></font></a>
+          </font>
+        </nav>
+      </td>
+    </tr>
+  </table>
+
+  <br/>
+
+  <!-- FORM ĐẶT HÀNG -->
+  <table align="center" bgcolor="#FFFFFF" border="1" cellpadding="20" cellspacing="0" width="800">
+    <tr>
+      <td>
+        <h2 align="center"><font color="#4C2113">FORM ĐẶT MÓN &amp; ĐẶT BÀN MỘC &amp; NÂU</font></h2>
+        <p align="center"><font color="#4C2113"><i>Vui lòng điền thông tin bên dưới để tiệm chuẩn bị món nước ngon nhất cho bạn.</i></font></p>
+        <hr size="1" color="#B38B60"/>
+        <br/>
+
+        <form action="xac-nhan.html" method="get">
+          
+          <!-- BƯỚC 18: THÔNG TIN NGƯỜI ĐẶT -->
+          <fieldset>
+            <legend><b><font color="#4C2113">Thông tin người đặt</font></b></legend>
+            <p>
+              <label for="ten">Họ tên *</label><br/>
+              <input autocomplete="name" id="ten" maxlength="60" minlength="2" name="hoTen" placeholder="Nguyen Van A" required="" type="text" size="40"/>
+            </p>
+            <p>
+              <label for="email">Email *</label><br/>
+              <input autocomplete="email" id="email" name="email" placeholder="demo@example.com" required="" type="email" size="40"/>
+            </p>
+            <p>
+              <label for="phone">Điện thoại (chỉ nhập số giả lập)</label><br/>
+              <input id="phone" name="phone" placeholder="0900000000" type="tel" size="40"/>
+            </p>
+          </fieldset>
+
+          <br/>
+
+          <!-- BƯỚC 19: CHI TIẾT THỰC ĐƠN & SẢN PHẨM -->
+          <fieldset>
+            <legend><b><font color="#4C2113">Chi tiết sản phẩm</font></b></legend>
+            
+            <p>
+              <label for="product">Mẫu thức uống *</label><br/>
+              <select id="product" name="maSanPham" required="">
+                <option value="">-- Chọn món nước --</option>
+                <option value="CF01">CF01 - Vanilla Mountain (139.000 đ)</option>
+                <option value="CF02">CF02 - Vanilla Affogato (110.000 đ)</option>
+                <option value="CF03">CF03 - Hibiscus Tea (90.000 đ)</option>
+                <option value="CF04">CF04 - Latte (99.000 đ)</option>
+                <option value="CF05">CF05 - Espresso con Panna (119.000 đ)</option>
+                <option value="CF06">CF06 - Strawberry Fresh (99.000 đ)</option>
+                <option value="CF07">CF07 - Sugar Crush (139.000 đ)</option>
+                <option value="CF08">CF08 - Iced Taro Latte (149.000 đ)</option>
+                <option value="CF09">CF09 - Mocha (109.000 đ)</option>
+                <option value="CF10">CF10 - Chocolate Delight (139.000 đ)</option>
+                <option value="CF11">CF11 - Neapolitan (149.000 đ)</option>
+                <option value="CF12">CF12 - Americano (99.000 đ)</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="size">Size tham khảo *</label><br/>
+              <select id="size" name="size" required="">
+                <option value="">-- Chọn size / tùy chọn --</option>
+                <option value="M-Da">Size M (Đá)</option>
+                <option value="M-Nong">Size M (Nóng)</option>
+                <option value="L-Da">Size L (Đá)</option>
+                <option value="L-Nong">Size L (Nóng)</option>
+                <option value="Tieu-Chuan">Tiêu chuẩn</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="quantity">Số lượng (1-5)</label><br/>
+              <input id="quantity" max="5" min="1" name="soLuong" required="" step="1" type="number" value="1"/>
+            </p>
+
+            <!-- HÌNH THỨC NHẬN MÓN (Ô CHỌN BÀN & ĐỊA CHỈ NẰM TRONG CÙNG CẤU TRÚC) -->
+            <fieldset>
+              <legend><b><font color="#4C2113">Hình thức nhận món</font></b></legend>
+              
+              <p>
+                <label>
+                  <input name="giaoHang" required="" type="radio" value="tai-quan"/> Thưởng thức tại quán
+                </label>
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="soBan">Số bàn (nếu ngồi tại quán):</label><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <select id="soBan" name="soBan">
+                  <option value="">-- Chọn số bàn --</option>
+                  <option value="Ban-01">Bàn 01 (Góc cửa sổ)</option>
+                  <option value="Ban-02">Bàn 02 (Bàn gỗ dài)</option>
+                  <option value="Ban-03">Bàn 03 (Sân hiên mộc)</option>
+                  <option value="Ban-04">Bàn 04 (Quầy trung tâm)</option>
+                  <option value="Ban-05">Bàn 05 (Góc yên tĩnh)</option>
+                </select>
+              </p>
+
+              <hr size="1" color="#DCB485"/>
+
+              <p>
+                <label>
+                  <input name="giaoHang" type="radio" value="giao-tan-noi"/> Giao tận nơi
+                </label>
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="diaChi">Địa chỉ nhận hàng (nếu giao tận nơi):</label><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="diaChi" name="diaChi" placeholder="Số nhà, tên đường, quận/huyện..." type="text" size="45"/>
+              </p>
+            </fieldset>
+
+            <br/>
+
+            <p>
+              <label for="note">Ghi chú</label><br/>
+              <textarea cols="50" id="note" maxlength="300" name="ghiChu" placeholder="Ghi chú thêm về đường, đá hoặc yêu cầu khác (không bắt buộc)" rows="4"></textarea>
+            </p>
+          </fieldset>
+
+          <br/>
+
+          <!-- BƯỚC 20: CHECKBOX ĐỒNG Ý & NÚT GỬI -->
+          <p>
+            <label>
+              <input name="dongY" required="" type="checkbox" value="yes"/> 
+              <font color="#4C2113">Tôi hiểu đây chỉ là form thực hành, không tạo đơn hàng thật *</font>
+            </label>
+          </p>
+
+          <p align="center">
+            <button type="submit">Gửi yêu cầu mẫu</button>
+            &nbsp;&nbsp;
+            <button type="reset">Nhập lại</button>
+          </p>
+
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <br/>
+
+  <!-- FOOTER -->
+  <table bgcolor="#4C2113" border="0" cellpadding="15" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+        <font color="#FFFFFF" size="2">
+          © Tiệm Cà Phê Mộc & Nâu
+        </font>
+      </td>
+    </tr>
+  </table>
+  <table bgcolor="#4C2113" border="0" cellpadding="16" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+        <font color="white">
+          <b>◆ MỘC & NÂU COFFEE</b> · 12 món thức uống demo · © 2026
+        </font>
+        <br/>
+        <font color="#DCB485">
+          Dữ liệu, giá bán và đơn hàng đều mang tính minh họa phục vụ học tập.
+        </font>
+        <br/>
+        <a href="index.html"><font color="#DCB485">↥ Quay lại trang chủ</font></a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
